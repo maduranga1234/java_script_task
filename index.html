@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Task Two</title>
-  <link rel="stylesheet" href="../../asets/css/bootstrap.css">
+    <link rel="stylesheet" href="asets/css/bootstrap.css">
 </head>
 <body>
 
@@ -25,21 +25,24 @@
 
 
 <script>
+    //Bind an event for Change Text Btn
+    //Get Input Text Value
+    //Create a list element
+    //Add it to the Ordered List
+    document.getElementById("btn").addEventListener(
+        "click",
+        function (){
+            var txt1= document.getElementById("txt").value;
 
+            var listItem = document.createElement("li");
+            listItem.className="list-group-item";
+            listItem.innerText = txt1;
 
-document.querySelector("button").addEventListener("click",function(){
-        var getText=document.querySelector('#txt').value;
-        document.querySelector('#list').innerText=getText;
+            var ol = document.getElementById("list");
+            ol.appendChild(listItem);
 
-
-    });
-
-
-//Bind an event for Change Text Btn
-//Get Input Text Value
-//Create a list element
-//Add it to the Ordered List
-
+        }
+    )
 
 </script>
 </body>
